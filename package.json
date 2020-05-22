@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "convert-units": "^2.3.4",
+    "error-ex": "git+https://github.com/Qix-/node-error-ex.git",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -16,7 +17,8 @@
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
     "react-weathericons": "^1.0.4",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
