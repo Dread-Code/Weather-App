@@ -1,10 +1,13 @@
 
-import { createStore } from 'redux';
-import {city} from '../reducers/city'
+import { createStore, compose, applyMiddleware } from 'redux';
+import reducers from '../reducers'
+import thunk from 'redux-thunk';
 
 const initialState = {
   city: 'Medellin'
 };
 
-export const store = createStore( city, initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); //instalacion de la deevtool
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export const store = createStore(reducers,initialState, composeEnhancer(applyMiddleware(thunk)));
